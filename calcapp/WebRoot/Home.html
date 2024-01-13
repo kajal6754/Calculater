@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+span{
+	font-size: 22px;
+	font-weight: bold;
+	display: inline-block;
+}
+body {
+	font-family: sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh; 
+	flex-direction: column;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border: 1px solid #fff;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	color: #333;
+	border-radius: 10px;
+}
+.grid-box-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px
+}
+.grid-box-4{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 30px;
+}
+h3{
+	font-size: 32px;
+}
+.btn{
+	display: inline-block;
+	padding: 8px 16px;
+	font-weight: bold;
+	color: #333;
+	background: white;
+   border-radius: 8px;
+   border: 2px solid black;
+   box-shadow: 0 0 5px rgba(0,0,0,.3);
+}
+.btn:hover,.btn:active{
+   background: #333;
+   color: white;
+
+}
+</style>
+
+</head>
+<body>
+	<form action="calc">
+		<h3>Welcome to Online Calculator</h3>
+		<div class="grid-box-2">
+			<input type="text" name="numone" placeholder="Enter first number" />
+			<span>First Number</span>
+		</div>
+		<div class="grid-box-2">
+			<input type="text" name="numtwo" placeholder="Enter second number" />
+			<span>Second Number</span>
+		</div> 
+		<div class="grid-box-4">
+			<input class="btn" type="submit" name="operation" value="ADD" /> 
+			<input class="btn"  type="submit" name="operation" value="SUB" />
+			<input class="btn"  type="submit" name="operation" value="DIV" /> 
+			<input class="btn"  type="submit" name="operation" value="MUL" />
+		</div>
+	</form>
+</body>
+</html>
